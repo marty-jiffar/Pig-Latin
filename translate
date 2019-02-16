@@ -1,0 +1,37 @@
+'''
+Pig Latin
+
+Marty Jiffar
+
+converts inputted string into pig latin
+'''
+
+def translate(sentence):
+    '''
+    Purpose: translates sentence into pig latin
+
+    Input: sentence (string)
+
+    Output: translation (string)
+    '''
+
+    vowels = ['a', 'e', 'i', 'o', 'u']
+    chunks = sentence.split()
+    translation = ""
+
+    for i, word in enumerate(chunks):
+        if word[0] in vowels: # case 1: word begins with vowel
+            new_word = word + 'yay'
+
+        elif word[1] in vowels: # case 2: begins with 1 consonant
+            new_word = word[1:] + word[0] + 'ay' 
+
+        else: # case 3: begins with 2 consonants
+            new_word = word[2:] + word[0] + word[1] + 'ay' 
+
+        translation += new_word
+
+        if i != len(chunks) - 1:
+            translation += " "
+
+    return translation
