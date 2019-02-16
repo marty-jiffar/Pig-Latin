@@ -1,4 +1,4 @@
-# Pig-Latin
+# Pig Latin
 
 A Python program that translates an inputted string into Pig Latin. The rules of Pig Latin:
 
